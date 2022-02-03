@@ -10,10 +10,18 @@ Very lightweight performance profiler based on inserting timestamps sampling in 
   
 	HistProfiler_Begin(ctx, “part1 of my code”)
 	
-	…
+	func(param1, param2);
 	
 	HistProfiler_End(ctx, “part1 of my code”)
 	
+  }
+  
+  or
+  
+  loop {
+  
+  	HistProfiled(ctx, "func1_profile", func, param1, param2)
+  
   }
   
 }
@@ -32,6 +40,7 @@ The accumulated data can be dumped to std::out or a text file.
 
 To visualize the data, 1) copy&paste it into excel,  2) select all. 2) insert your favorite chart. See example in the docs/charts.png.
 
+---------
 
 profilerApi.h contains the interface
 
